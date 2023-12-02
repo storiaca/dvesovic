@@ -1,0 +1,47 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+.container {
+  width: 600px;
+  height: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 8px #ddd;
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 1px solid #eee;
+}
+
+.front {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: tomato;
+  transition: 0.7s all;
+  backface-visibility: hidden;
+}
+.back {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background: cyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  transform: perspective(900px) rotateY(-180deg);
+  backface-visibility: hidden;
+  transition: 0.7s all;
+}
+.card:hover > .front {
+  transform: perspective(900px) rotateY(180deg);
+}
+.card:hover > .back {
+  transform: perspective(900px) rotateY(0);
+}
