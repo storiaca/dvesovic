@@ -23,6 +23,10 @@
   height: 100px;
   position: absolute;
   background: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
   transition: 0.7s all;
   backface-visibility: hidden;
 }
@@ -39,9 +43,10 @@
   backface-visibility: hidden;
   transition: 0.7s all;
 }
-.card:hover > .front {
+
+.card.active > .front {
   transform: perspective(900px) rotateY(180deg);
 }
-.card:hover > .back {
+.card.active > .back {
   transform: perspective(900px) rotateY(0);
 }

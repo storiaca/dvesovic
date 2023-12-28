@@ -37,18 +37,34 @@ let icons = [
   "W",
 ];
 let container = document.querySelector(".container");
-console.log(icons.length);
+
+
 createGrid();
+let allCards = document.querySelectorAll(".card");
+
+allCards.forEach(card => card.addEventListener("click", flipCard))
+
+function flipCard() {
+  // let front = this.querySelector('.front');
+  // let back = this.querySelector('.back');
+
+  // front.style.transform = "perspective(900px) rotateY(180deg)";
+  // back.style.transform = "perspective(900px) rotateY(0)";
+
+  this.className = "card active"
+}
 
 function createGrid() {
   let cardsHtml = "";
   for (let i = 0; i < 36; i++) {
+    let rand = Math.floor(Math.random() * icons.length)
     cardsHtml += `
         <div class="card">
-            <div class="back">${icons[i]}</div>
+            <div class="back">${icons[rand]}</div>
         	<div class="front"></div>
         </div>
       `.trim();
+    icons.splice(rand, 1);
   }
   container.innerHTML = cardsHtml;
 }
