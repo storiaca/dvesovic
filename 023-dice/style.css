@@ -36,9 +36,15 @@ body {
   border-radius: 50%;
 }
 
-.title {
+.start {
   max-width: 600px;
   margin: 3rem auto;
   text-align: center;
-  color: rgb(238, 24, 9);
+  button {
+    padding: 8px 12px;
+    background-color: blue;
+    font-size: 1.4rem;
+    color: rgb(238, 24, 9);
+    border-radius: 6px;
+  }
 }
