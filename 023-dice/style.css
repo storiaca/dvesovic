@@ -46,5 +46,22 @@ body {
     font-size: 1.4rem;
     color: rgb(238, 24, 9);
     border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+.score {
+  max-width: 600px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    color: white;
+    font-size: 2rem;
+    background-color: black;
+    opacity: 0.6;
+    border-radius: 6px;
+    padding: 20px;
   }
 }
