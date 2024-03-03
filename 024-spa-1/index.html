@@ -10,6 +10,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <header>
@@ -43,6 +44,11 @@
         </div>
       </nav>
     </header>
+    <div class="p-5 text-center">
+      <button id="allBtn" class="btn btn-primary">All Phones</button>
+      <button id="addBtn" class="btn btn-info">Add Phone</button>
+      <button id="editBtn" class="btn btn-warning">Edit/Delete</button>
+    </div>
     <div class="container">
       <div class="row" id="all-phones-view">
         <div class="col-12">
@@ -59,25 +65,47 @@
                 <th>Available</th>
               </tr>
             </thead>
-            <tbody>
-              <!-- <tr>
-                <td>1</td>
-                <td>Samsung</td>
-                <td>Note 10</td>
-                <td>12000</td>
-                <td><button class="btn btn-sm btn-danger">No</button></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>iPhone</td>
-                <td>12 Pro Max</td>
-                <td>19000</td>
-                <td><button class="btn btn-sm btn-success">Yes</button></td>
-              </tr> -->
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
       </div>
+      <!-- end row all-phones-view -->
+
+      <div class="row" id="add-view">
+        <div class="col-12">
+          <h3 class="display-4">Add Phone</h3>
+        </div>
+        <div class="col-10 offset-1">
+          <input type="text" class="form-control" placeholder="Id" name="id" />
+          <input
+            type="text"
+            class="my-2 form-control"
+            placeholder="Brand"
+            name="brand"
+          />
+          <input
+            type="text"
+            class="my-2 form-control"
+            placeholder="Name"
+            name="name"
+          />
+          <input
+            type="text"
+            class="my-2 form-control"
+            placeholder="Price"
+            name="price"
+          />
+          <select name="available" class="my-2 form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+
+          <button id="saveBtn" class="mt-4 btn btn-primary form-control">
+            Add Phone
+          </button>
+        </div>
+      </div>
+      <!-- end row add-view -->
     </div>
     <script src="./database.js"></script>
     <script src="./app.js"></script>
