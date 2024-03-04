@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vezba SPA</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav">
+          <ul>
+            <li>Home</li>
+            <li>Destination</li>
+            <li>Crew</li>
+            <li>Technology</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="section section-home">
+      <h2>Home</h2>
+    </section>
+    <section class="section section-destination">
+      <div class="content">
+        <div class="content-buttons">
+          <button class="content-btn" data-location="destination">Moon</button>
+          <button class="content-btn" data-location="mars">Mars</button>
+          <button class="content-btn" data-location="jupiter">Jupiter</button>
+          <button class="content-btn" data-location="neptun">Neptun</button>
+        </div>
+        <div class="content-images">
+          <div class="images-description-moon" data-location="moon">
+            Destination Moon
+          </div>
+          <div class="images-hide images-description-mars" data-location="mars">
+            Destination Mars
+          </div>
+          <div
+            class="images-hide images-description-jupiter"
+            data-location="jupiter"
+          >
+            Destination Jupiter
+          </div>
+          <div
+            class="images-hide images-description-neptun"
+            data-location="destination"
+          >
+            Destination Neptun
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-crew">
+      <!-- <div class="content">
+        <div class="content-buttons">
+          <button class="content-btn">Moon</button>
+          <button class="content-btn">Mars</button>
+          <button class="content-btn">Jupiter</button>
+          <button class="content-btn">Neptun</button>
+        </div>
+        <div class="content-images">
+          <div class="images-description-moon">Destination Moon</div>
+          <div class="images-hide images-description-mars">
+            Destination Mars
+          </div>
+          <div class="images-hide images-description-jupiter">
+            Destination Jupiter
+          </div>
+          <div class="images-hide images-description-neptun">
+            Destination Neptun
+          </div>
+        </div>
+      </div> -->
+    </section>
+    <section class="section section-technology">
+      <h2>Technology</h2>
+    </section>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
