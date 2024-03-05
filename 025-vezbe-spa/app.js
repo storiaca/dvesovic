@@ -21,11 +21,25 @@ function toggeViewContent(el) {
   console.log(el);
   let destination = el.innerHTML.toLowerCase();
 
-  const btn = document.querySelectorAll(
+  const btns = document.querySelectorAll(
     `.section-${destination} .content .content-buttons button`
   );
 
-  console.log(btn);
+  let views = document.querySelectorAll(
+    `.content-images [data-location = ${destination}]`
+  );
+
+  btns.forEach((button) => {
+    button.addEventListener("click", function () {
+      let id = button.dataset.id;
+      views.forEach((view) => {
+        view.style.display = "none";
+      });
+
+      views[id].style.display = "block";
+    });
+  });
+
   // let viewBtns = document.querySelectorAll(
   //   `.section-${viewName} .content .content-buttons button`
   // );
