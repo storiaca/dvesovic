@@ -47,7 +47,7 @@
     <div class="p-5 text-center">
       <button id="allBtn" class="btn btn-primary">All Phones</button>
       <button id="addBtn" class="btn btn-info">Add Phone</button>
-      <button id="editBtn" class="btn btn-warning">Edit/Delete</button>
+      <button id="ediDeletetBtn" class="btn btn-warning">Edit/Delete</button>
     </div>
     <div class="container">
       <div class="row" id="all-phones-view">
@@ -70,6 +70,28 @@
         </div>
       </div>
       <!-- end row all-phones-view -->
+
+      <div class="row" id="edit-delete-view">
+        <div class="col-12">
+          <h3 class="display-4">Edit/Delete</h3>
+        </div>
+        <div class="col-10 offset-1">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Brand</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Available</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      <!-- end row edit-delete-view -->
 
       <div class="row" id="add-view">
         <div class="col-12">
@@ -106,6 +128,42 @@
         </div>
       </div>
       <!-- end row add-view -->
+
+      <div class="row" id="edit-phone-view">
+        <div class="col-12">
+          <h3 class="display-4">Edit Phone</h3>
+        </div>
+        <div class="col-10 offset-1">
+          <input type="text" class="form-control" placeholder="Id" name="eid" />
+          <input
+            type="text"
+            class="my-2 form-control"
+            placeholder="Brand"
+            name="ebrand"
+          />
+          <input
+            type="text"
+            class="my-2 form-control"
+            placeholder="Name"
+            name="ename"
+          />
+          <input
+            type="text"
+            class="my-2 form-control"
+            placeholder="Price"
+            name="eprice"
+          />
+          <select name="eavailable" class="my-2 form-control">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+          </select>
+
+          <button id="esaveBtn" class="mt-4 btn btn-warning form-control">
+            Update
+          </button>
+        </div>
+      </div>
+      <!-- end row edit-phone-view -->
     </div>
     <script src="./database.js"></script>
     <script src="./app.js"></script>
