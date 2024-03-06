@@ -1,3 +1,9 @@
+window.addEventListener("beforeunload", save);
+
+function save() {
+  localStorage.db = JSON.stringify(db);
+}
+
 // views
 let allPhoneViews = document.getElementById("all-phones-view");
 let addView = document.getElementById("add-view");
