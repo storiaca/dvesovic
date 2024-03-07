@@ -127,7 +127,7 @@ function displayModal() {
 //   console.log(val);
 // });
 
-const prod = api.getAll();
+const prod = API.getAll();
 
 prod.then(
   (val) => console.log(val),

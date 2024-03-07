@@ -1,7 +1,7 @@
 class API {
-  constructor() {}
+  // constructor() {}
 
-  getAll() {
+  static getAll() {
     return new Promise(function (resolve, reject) {
       let xml = new XMLHttpRequest();
 
@@ -20,4 +20,27 @@ class API {
   }
 }
 
-let api = new API();
+// let api = new API();
+
+class Human {
+  static car = "Volvo";
+  name;
+  static counter = 0;
+  constructor(name) {
+    Human.counter++;
+    this.name = name;
+  }
+}
+
+let h1 = new Human("Aleksandar");
+let h2 = new Human("Milan");
+let h3 = new Human("Nikola");
+
+console.log(h1.car); // undefined
+console.log(Human.car); // Volvo
+
+console.log(Human.counter); // 3
+
+class ConnectDB {
+  static con = "hhtp://mydb.com";
+}
