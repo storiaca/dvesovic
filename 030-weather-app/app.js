@@ -63,10 +63,25 @@ function displayWeatherData(weatherData) {
   html += `
     <img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png" alt="Weather icon">
     <h1>City name: ${cityInfo.name}, ${name}</h1>
-    <h2>Day name: dayName(${cityInfo.name}), ${name}</h2>
+    <h2>Day name: ${dayName(dt)}</h2>
+    <h3>Temperature: ${Math.floor(temp.temp)} &degC</h3>
+    <p>Feels like: ${Math.floor(temp.feels_like)} &degC</p>
   `.trim();
 
   current.innerHTML = html;
 }
 
-function dayName(day) {}
+function dayName(time) {
+  let date = new Date(time * 1000);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[date.getDay()];
+}
