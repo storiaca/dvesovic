@@ -9,3 +9,48 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  box-shadow: 0 0 8px #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 50px;
+  text-align: center;
+  background-color: beige;
+}
+
+main {
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+option {
+  width: 40%;
+  height: 40%;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in;
+}
+
+option:hover {
+  background-color: olivedrab;
+  cursor: pointer;
+  color: wheat;
+}
+
+footer {
+  height: 50px;
+  text-align: center;
+  background-color: bisque;
+}

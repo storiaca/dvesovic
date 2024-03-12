@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "text": "What is the capital of France?",
+    "options": ["Paris", "London", "Berlin", "Rome"],
+    "correctAnswer": "Paris",
+    "points": 10,
+    "category": "Geography"
+  },
+  {
+    "id": 2,
+    "text": "Which planet is known as the Red Planet?",
+    "options": ["Jupiter", "Mars", "Venus", "Saturn"],
+    "correctAnswer": "Mars",
+    "points": 10,
+    "category": "Science"
+  },
+  {
+    "id": 3,
+    "text": "Who painted the Mona Lisa?",
+    "options": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Michelangelo"
+    ],
+    "correctAnswer": "Leonardo da Vinci",
+    "points": 10,
+    "category": "Art"
+  },
+  {
+    "id": 4,
+    "text": "What is the chemical symbol for water?",
+    "options": ["H2O", "CO2", "O2", "NaCl"],
+    "correctAnswer": "H2O",
+    "points": 10,
+    "category": "Science"
+  },
+  {
+    "id": 5,
+    "text": "Who wrote 'Romeo and Juliet'?",
+    "options": [
+      "William Shakespeare",
+      "Jane Austen",
+      "Charles Dickens",
+      "Mark Twain"
+    ],
+    "correctAnswer": "William Shakespeare",
+    "points": 10,
+    "category": "Literature"
+  },
+  {
+    "id": 6,
+    "text": "What is the largest mammal in the world?",
+    "options": ["Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+    "correctAnswer": "Blue Whale",
+    "points": 10,
+    "category": "Science"
+  },
+  {
+    "id": 7,
+    "text": "Who discovered penicillin?",
+    "options": [
+      "Alexander Fleming",
+      "Marie Curie",
+      "Louis Pasteur",
+      "Gregor Mendel"
+    ],
+    "correctAnswer": "Alexander Fleming",
+    "points": 10,
+    "category": "Science"
+  },
+  {
+    "id": 8,
+    "text": "Which artist painted 'Starry Night'?",
+    "options": [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Claude Monet",
+      "Salvador Dalí"
+    ],
+    "correctAnswer": "Vincent van Gogh",
+    "points": 10,
+    "category": "Art"
+  },
+  {
+    "id": 9,
+    "text": "What is the capital of Japan?",
+    "options": ["Beijing", "Tokyo", "Seoul", "Bangkok"],
+    "correctAnswer": "Tokyo",
+    "points": 10,
+    "category": "Geography"
+  },
+  {
+    "id": 10,
+    "text": "Who developed the theory of relativity?",
+    "options": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Stephen Hawking",
+      "Galileo Galilei"
+    ],
+    "correctAnswer": "Albert Einstein",
+    "points": 10,
+    "category": "Science"
+  }
+]
