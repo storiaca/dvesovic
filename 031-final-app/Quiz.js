@@ -12,7 +12,6 @@ class Quiz {
 
   randomize(question) {
     let copyOptions = [].concat(question.options);
-    console.log(copyOptions);
     let arrForExport = [];
     for (let i = 0; i < 4; i++) {
       let rand = Math.floor(Math.random() * copyOptions.length);
@@ -35,7 +34,3 @@ class Quiz {
     this.questionIndex++;
   }
 }
-
-let quiz = new Quiz(questions);
-
-console.log(quiz);
