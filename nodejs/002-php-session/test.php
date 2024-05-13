@@ -14,4 +14,20 @@
     echo $names[0];
     echo $person['name'];
 
+    for ($i=0; $i < 10; $i++) { 
+        # code...
+    }
+
+    foreach ($person as $key => $value) {
+        # code...
+    }
+
+    $car = 'Skoda';
+
+    function info($car) {
+        echo $car;
+    }
+
+    info($car)
+
 ?>
