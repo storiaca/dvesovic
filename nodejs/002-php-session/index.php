@@ -1,38 +1,23 @@
+<?php session_start() ?>
 <?php require('pets.php') ?>
 <?php require('partials/top.php') ?>
 
 <div class="container">
     <h1>Welcome to PetShop</h1>
+    <?php if (isset($_SESSION['pet'])): ?>
+        <a href="logout.php" class="btn btn-danger">Logout</a>
+    <?php endif; ?>
     <div class="row">
         <div class="col-6 offset-3">
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th>Pet</th>
-                        <th>Type</th>
-                        <th>Owner</th>
-                        <th>Info</th>
-                    </tr>
-                </thead>
-                <tbody>
-                   <?php foreach ($pets as $pet):?>
-                    <tr>
-                        <td>
-                            <?php echo $pet['name'] ?>
-                        </td>
-                        <td>
-                            <?php echo $pet['type'] ?>
-                        </td>
-                        <td>
-                            <?php echo $pet['owner'] ?>
-                        </td>
-                        <td>
-                            <a href="process.php" class="btn btn-primary">Info</a>
-                        </td>
-                    </tr>
-                   <?php endforeach ?>
-                </tbody>
-            </table>
+            <?php if (isset($_SESSION['pet'])): ?>
+            <?php require('partials/table.php') ?>
+            <?php else: ?>
+            <form action="login.php" method="post">
+                <input type="text" placeholder="Username" name="username" class="form-control"> <br>
+                <input type="text" placeholder="Password" name="password" class="form-control"> <br>
+                <button class="btn btn-primary">Login</button>
+            </form>
+            <?php endif; ?>
         </div>
     </div>
 </div>
