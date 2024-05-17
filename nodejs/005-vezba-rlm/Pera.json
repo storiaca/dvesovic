@@ -1,0 +1,18 @@
+[
+  { "text": "Sunce je zvezda ", "correct": true, "userAnswer": "true" },
+  {
+    "text": "Paris je glavni grad Francuske ",
+    "correct": true,
+    "userAnswer": "true"
+  },
+  {
+    "text": "Python je vrsta zmije, ali i programski jezik ",
+    "correct": true,
+    "userAnswer": "true"
+  },
+  {
+    "text": "Najveca planeta u suncevom sistemu je Jupiter ",
+    "correct": true,
+    "userAnswer": "false"
+  }
+]

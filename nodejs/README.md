@@ -13,3 +13,7 @@ https://v8.dev/
 https://libuv.org/
 
 https://github.com/libuv/libuv
+
+## node rl.setPrompt
+
+https://nodejs.org/api/readline.html#rlsetpromptprompt
