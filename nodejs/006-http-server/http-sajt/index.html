@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <h1>Home Page</h1>
+    <form action="/process.html" method="POST">
+      <input type="text" />
+      <button>Save</button>
+    </form>
+    <button id="btn">Get data</button>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", function () {
+        let xml = new XMLHttpRequest();
+        xml.open("get", "/api", false);
+        xml.send();
+        console.log(xml.responseText);
+      });
+    </script>
+  </body>
+</html>
