@@ -13,5 +13,11 @@
   ],
   "author": "Aleksandar Ristic",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dayjs": "^1.11.11"
+  },
+  "devDependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }
