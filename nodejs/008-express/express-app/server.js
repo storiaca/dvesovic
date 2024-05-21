@@ -5,6 +5,7 @@ const app = express();
 app.use("/", express.static(__dirname + "/public"));
 
 app.get("/wish", function (req, res) {
+  // samo da odem do baze MySQL ili MongDB
   res.sendFile(__dirname + "/wish.json");
 });
 
