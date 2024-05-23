@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TwoWay</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <h3 class="mt-4">Latest Messages</h3>
+          <div id="all-messages"></div>
+        </div>
+        <div class="col-9">
+          <h1 class="display4 mt-4">Welcome to our App</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            harum quae ratione magnam? Sapiente nostrum incidunt libero numquam,
+            et deserunt, assumenda reprehenderit excepturi possimus molestias
+            reiciendis odio beatae. Voluptas, sequi. Ipsa tenetur sit ex ratione
+            doloremque debitis voluptates, non nam quo odio nisi ab iste labore
+            porro. Nemo, deleniti quam! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Libero harum quae ratione magnam? Sapiente nostrum
+            incidunt libero numquam, et deserunt, assumenda reprehenderit
+            excepturi possimus molestias reiciendis odio beatae. Voluptas,
+            sequi. Ipsa tenetur sit ex ratione doloremque debitis voluptates,
+            non nam quo odio nisi ab iste labore porro. Nemo, deleniti quam!
+          </p>
+          <div class="row">
+            <div class="col-6">
+              <form action="/messages" method="post">
+                <input
+                  id="email"
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                />
+                <br />
+                <textarea
+                  class="form-control"
+                  name="message"
+                  placeholder="Message"
+                  id="msg"
+                ></textarea
+                ><br />
+                <button id="sub" class="btn btn-primary">Send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
