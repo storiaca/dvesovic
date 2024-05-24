@@ -31,11 +31,21 @@ subBtn.addEventListener("click", function (e) {
     })
     .catch((err) => console.log(err));
 
-  // let xml = new XMLHttpRequest();
+  let xml = new XMLHttpRequest();
+  xml.open("POST", "/messages");
+  xml.setRequestHeader("Content-Type", "application/json");
+  xml.onreadystatechange = function () {
+    if (xml.readyState === 4 && xml.status === 200) {
+      console.log(xml.responseText);
+    }
+  };
 
-  // xml.open("/messages");
-
-  // xml.send();
+  xml.send(
+    JSON.stringify({
+      email: emailInput.value,
+      message: messageInput.value,
+    })
+  );
 
   emailInput.value = "";
   messageInput.value = "";
