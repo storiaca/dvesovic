@@ -1,0 +1,12 @@
+body {
+  background-color: #3a3a3a;
+  color: aliceblue;
+}
+
+.navbar .navbar-nav {
+  margin-right: auto;
+}
+.form-nav {
+  display: flex;
+  gap: 8px;
+}
