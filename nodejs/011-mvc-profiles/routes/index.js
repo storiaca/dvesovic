@@ -1,12 +1,14 @@
 const express = require("express");
-const fs = require("fs");
+
+const homeCtrl = require("../controllers/homeCtrl");
+const profileCtrl = require("../controllers/profileCtrl");
 
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  fs.readFile("./data.json", "utf-8", (err, file) => {
-    res.render("index", { accounts: JSON.parse(file) });
-  });
-});
+router.get("/", homeCtrl);
+
+router.get("/profile/:account_id", profileCtrl.index);
+
+router.get("/delete", profileCtrl.deleteProfile);
 
 module.exports = router;

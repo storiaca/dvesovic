@@ -1,0 +1,153 @@
+ [
+      {
+        "id": 21,
+        "firstName": "Benjamin",
+        "lastName": "Allen",
+        "deposit": 6100,
+        "creditCard": "Visa",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 35,
+          "gender": "Male",
+          "occupation": "Software Engineer",
+          "city": "San Jose",
+          "email": "benjamin.allen@example.com"
+        }
+      },
+      {
+        "id": 22,
+        "firstName": "Nora",
+        "lastName": "King",
+        "deposit": 3900,
+        "creditCard": "Mastercard",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 29,
+          "gender": "Female",
+          "occupation": "Marketing Coordinator",
+          "city": "Phoenix",
+          "email": "nora.king@example.com"
+        }
+      },
+      {
+        "id": 23,
+        "firstName": "Logan",
+        "lastName": "Wright",
+        "deposit": 5200,
+        "creditCard": "American Express",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 32,
+          "gender": "Male",
+          "occupation": "Financial Advisor",
+          "city": "San Antonio",
+          "email": "logan.wright@example.com"
+        }
+      },
+      {
+        "id": 24,
+        "firstName": "Grace",
+        "lastName": "Adams",
+        "deposit": 7200,
+        "creditCard": "Discover",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 30,
+          "gender": "Female",
+          "occupation": "Event Planner",
+          "city": "Philadelphia",
+          "email": "grace.adams@example.com"
+        }
+      },
+      {
+        "id": 25,
+        "firstName": "Luke",
+        "lastName": "Parker",
+        "deposit": 4800,
+        "creditCard": "Visa",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 33,
+          "gender": "Male",
+          "occupation": "Real Estate Agent",
+          "city": "Charlotte",
+          "email": "luke.parker@example.com"
+        }
+      },
+      {
+        "id": 26,
+        "firstName": "Chloe",
+        "lastName": "Ross",
+        "deposit": 5600,
+        "creditCard": "Mastercard",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 28,
+          "gender": "Female",
+          "occupation": "Graphic Designer",
+          "city": "Seattle",
+          "email": "chloe.ross@example.com"
+        }
+      },
+      {
+        "id": 27,
+        "firstName": "Jack",
+        "lastName": "Edwards",
+        "deposit": 4200,
+        "creditCard": "American Express",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 36,
+          "gender": "Male",
+          "occupation": "Teacher",
+          "city": "Dallas",
+          "email": "jack.edwards@example.com"
+        }
+      },
+      {
+        "id": 28,
+        "firstName": "Harper",
+        "lastName": "Campbell",
+        "deposit": 6900,
+        "creditCard": "Discover",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 31,
+          "gender": "Female",
+          "occupation": "Software Developer",
+          "city": "Austin",
+          "email": "harper.campbell@example.com"
+        }
+      },
+      {
+        "id": 29,
+        "firstName": "Ryan",
+        "lastName": "Mitchell",
+        "deposit": 3700,
+        "creditCard": "Visa",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 34,
+          "gender": "Male",
+          "occupation": "Accountant",
+          "city": "Chicago",
+          "email": "ryan.mitchell@example.com"
+        }
+      },
+      {
+        "id": 30,
+        "firstName": "Lily",
+        "lastName": "Roberts",
+        "deposit": 8000,
+        "creditCard": "Mastercard",
+        "createdAt": "2024-03-31T00:00:00Z",
+        "profileInfo": {
+          "age": 29,
+          "gender": "Female",
+          "occupation": "Journalist",
+          "city": "New York",
+          "email": "lily.roberts@example.com"
+        }
+      }
+    ]
+  
