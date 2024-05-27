@@ -1,6 +1,6 @@
-const fs = require("fs");
+const fs = require("fs").promises;
 
-const index = (req, res) => {
+const index = async (req, res) => {
   let id = req.params.account_id;
   fs.readFile("./data.json", "utf-8", (err, content) => {
     let arrContent = JSON.parse(content);
@@ -9,6 +9,9 @@ const index = (req, res) => {
   });
 };
 
-const deleteProfile = (req, res) => {};
+const deleteProfile = (req, res) => {
+  console.log(req.params.id);
+  res.send("Ok");
+};
 
 module.exports = { index, deleteProfile };
