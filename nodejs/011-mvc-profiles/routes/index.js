@@ -9,6 +9,6 @@ router.get("/", homeCtrl);
 
 router.get("/profile/:account_id", profileCtrl.index);
 
-router.get("/profile/:id/delete", profileCtrl.deleteProfile);
+//router.get("/profile/:id/delete", profileCtrl.deleteProfile);
 
 module.exports = router;
