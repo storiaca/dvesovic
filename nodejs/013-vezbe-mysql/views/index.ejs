@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MySQL Vezba</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <div class="row mb-4">
+            <form action="/create" method="post">
+              <div class="input-group">
+                <input
+                  type="text"
+                  name="full_name"
+                  placeholder="Full Name"
+                  class="form-control"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  class="form-control"
+                />
+                <button class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+          <div class="row">
+            <% for( let i = 0; i < data.length; i++ ) { %> <%-
+            include('./partials/card', {user: data[i]}) %> <% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
