@@ -1,5 +1,5 @@
 <div class="col-4">
-  <div class="card <% if (user.active) { %> bg-info <% } %>">
+  <div class="card <% if (user.active) { %> bg-info <% } %> mb-3">
     <div class="card-header"><%= user.full_name %></div>
     <div class="card-body"><%= user.email %></div>
     <div class="card-footer">
@@ -10,6 +10,7 @@
       >
         <% if (user.active) { %> Disable <% } else { %> Enable <% } %>
       </a>
+      <a href="/edit/<%= user.id %>" class="btn btn-info">Edit</a>
     </div>
   </div>
 </div>

@@ -1,12 +1,12 @@
 const mysql2 = require("mysql2");
-require("dotenv").config();
+// require("dotenv").config();
 
 const db = mysql2
-  .createConnection({
-    host: "localhost",
-    user: "root",
+  .createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
-    database: "boot",
+    database: process.env.DB_NAME,
   })
   .promise();
 

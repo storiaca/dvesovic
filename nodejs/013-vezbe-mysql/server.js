@@ -9,6 +9,6 @@ app.use(express.static(__dirname + "/node_modules/bootstrap/dist/css"));
 
 app.use(routes);
 
-app.listen(8080, () => {
-  console.log("Server is listeninig on port 8080");
+app.listen(process.env.PORT, () => {
+  console.log("Server is listeninig on port " + process.env.PORT);
 });
