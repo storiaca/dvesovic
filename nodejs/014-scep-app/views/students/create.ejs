@@ -1,0 +1,47 @@
+<%- include('../partials/head') %> <%- include('../partials/navbar') %>
+<div class="row">
+  <div class="col-6">
+    <h1>Create student</h1>
+  </div>
+  <div class="col-6 offset-3">
+    <form action="/students/create" method="post">
+      <div class="form-group">
+        <label for="firstname">First name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstname"
+          name="first_name"
+          placeholder="First name"
+          required
+        />
+      </div>
+      <div class="form-group my-3">
+        <label for="lastname">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastname"
+          name="last_name"
+          placeholder="Last Name"
+          required
+        />
+      </div>
+      <div class="form-group mb-3">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          placeholder="Email"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
+
+<%-include('../partials/bottom') %>
