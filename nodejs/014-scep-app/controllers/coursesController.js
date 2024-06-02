@@ -5,4 +5,17 @@ const index = async (req, res) => {
   res.render("courses/index", { title: "Courses", courses });
 };
 
-module.exports = { index };
+const create = (req, res) => {
+  res.render("courses/create", { title: "Courses" });
+};
+
+const store = async (req, res) => {
+  const { title, instructor } = req.body;
+  await db.query("INSERT INTO courses(title, instructor) VALUES(?,?)", [
+    title,
+    instructor,
+  ]);
+  res.redirect("/courses");
+};
+
+module.exports = { index, create, store };
