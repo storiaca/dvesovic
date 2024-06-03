@@ -24,7 +24,33 @@ const show = async (req, res) => {
     "SELECT * FROM students WHERE student_id = ?",
     [student_id]
   );
-  res.render("students/profile", { title: "Students", student: student });
+  const [courses] = await db.query("SELECT * FROM courses");
+  const [enrollments] = await db.query(
+    `SELECT * FROM enrollments
+    JOIN courses ON enrollments.course_id = courses.course_id
+    WHERE student_id = ?`,
+    [student_id]
+  );
+
+  function findUnenrolledCourses(studentId) {
+    const enrolledCourseIds = enrollments
+      .filter((enrollment) => enrollment.student_id === studentId)
+      .map((enrollment) => enrollment.course_id);
+
+    const unenrolledCourses = courses.filter(
+      (course) => !enrolledCourseIds.includes(course.course_id)
+    );
+    return unenrolledCourses;
+  }
+
+  const unenrolledCourses = findUnenrolledCourses(parseInt(student_id));
+
+  res.render("students/profile", {
+    title: "Students",
+    student,
+    unenrolledCourses,
+    enrollments,
+  });
 };
 
 module.exports = {
