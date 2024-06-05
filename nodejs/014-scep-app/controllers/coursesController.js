@@ -2,11 +2,15 @@ const db = require("../database/config");
 
 const index = async (req, res) => {
   const [courses] = await db.query("SELECT * FROM courses");
-  res.render("courses/index", { title: "Courses", courses });
+  res.render("courses/index", {
+    title: "Courses",
+    courses,
+    user: req.session.user,
+  });
 };
 
 const create = (req, res) => {
-  res.render("courses/create", { title: "Courses" });
+  res.render("courses/create", { title: "Courses", user: req.session.user });
 };
 
 const store = async (req, res) => {
