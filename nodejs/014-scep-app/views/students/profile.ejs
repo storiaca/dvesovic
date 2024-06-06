@@ -36,13 +36,13 @@
       </div>
       <div class="row">
         <div class="col-6 alert alert-info">
-          <% if (unenrolledCourses.length > 0) { %>
+          <% if (displayCourses.length > 0) { %>
 
           <form action="/enrollments/store" method="post">
             <select name="course_id" class="form-control">
-              <% for( let i=0; i < unenrolledCourses.length; i++ ) { %>
-              <option value="<%= unenrolledCourses[i].course_id %>">
-                <%= unenrolledCourses[i].title %>
+              <% for( let i=0; i < displayCourses.length; i++ ) { %>
+              <option value="<%= displayCourses[i].course_id %>">
+                <%= displayCourses[i].title %>
               </option>
               <% } %></select
             ><br />
@@ -56,7 +56,26 @@
           <% } %>
           <h4>No courses to enrolle</h4>
         </div>
-        <div class="col-6"></div>
+        <div class="col-6">
+          <form action="/payments/store" method="post">
+            <input
+              type="hidden"
+              value="<%= student.student_id %>"
+              name="student_id"
+            />
+            <input type="text" name="amount" class="form-control mb-3" />
+            <select name="course_id" class="form-control">
+              <% for( let i = 0; i < enrollments.length; i++ ) { %>
+              <option value="<%= enrollments[i].course_id %>">
+                <%= enrollments[i].title %>
+              </option>
+              <% } %>
+            </select>
+            <div class="mt-3 text-end">
+              <button class="btn btn-md btn-success">Add Payment</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>

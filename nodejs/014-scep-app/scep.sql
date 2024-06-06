@@ -30,6 +30,7 @@ CREATE TABLE payments (
 payment_id int(11) NOT NULL AUTO_INCREMENT,
 student_id int(11) NOT NULL,
 course_id int(11) NOT NULL,
+amount int(11) NOT NULL,
 created_at timestamp NOT NULL DEFAULT current_timestamp(),
 PRIMARY KEY (payment_id),
 FOREIGN KEY (student_id) REFERENCES students(student_id),

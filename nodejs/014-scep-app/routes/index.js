@@ -16,6 +16,7 @@ router.use("/", require("./home-route"));
 router.use("/students", require("./students-route"));
 router.use("/courses", require("./courses-route"));
 router.use("/enrollments", require("./enrollments-route"));
+router.use("/payments", require("./payments-route"));
 router.use("/auth", require("./auth-route"));
 
 module.exports = router;

@@ -36,23 +36,37 @@ const show = async (req, res) => {
     [student_id]
   );
 
-  function findUnenrolledCourses(studentId) {
-    const enrolledCourseIds = enrollments
-      .filter((enrollment) => enrollment.student_id === studentId)
-      .map((enrollment) => enrollment.course_id);
+  const displayCourses = [];
 
-    const unenrolledCourses = courses.filter(
-      (course) => !enrolledCourseIds.includes(course.course_id)
-    );
-    return unenrolledCourses;
-  }
+  courses.forEach((course) => {
+    let upisan = false;
+    enrollments.forEach((enrollment) => {
+      if (course.course_id === enrollment.course_id) {
+        upisan = true;
+      }
+    });
+    if (!upisan) {
+      displayCourses.push(course);
+    }
+  });
 
-  const unenrolledCourses = findUnenrolledCourses(parseInt(student_id));
+  // function findUnenrolledCourses(studentId) {
+  //   const enrolledCourseIds = enrollments
+  //     .filter((enrollment) => enrollment.student_id === studentId)
+  //     .map((enrollment) => enrollment.course_id);
+
+  //   const unenrolledCourses = courses.filter(
+  //     (course) => !enrolledCourseIds.includes(course.course_id)
+  //   );
+  //   return unenrolledCourses;
+  // }
+
+  // const unenrolledCourses = findUnenrolledCourses(parseInt(student_id));
 
   res.render("students/profile", {
     title: "Students",
     student,
-    unenrolledCourses,
+    displayCourses,
     enrollments,
   });
 };
