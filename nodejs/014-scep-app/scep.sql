@@ -36,3 +36,14 @@ PRIMARY KEY (payment_id),
 FOREIGN KEY (student_id) REFERENCES students(student_id),
 FOREIGN KEY (course_id) REFERENCES courses(course_id)
 )
+
+CREATE TABLE admins (
+admin_id int(11) NOT NULL AUTO_INCREMENT,
+email varchar(60) NOT NULL,
+password varchar(60) NOT NULL,
+role varchar(20) NOT NULL,
+created_at timestamp NOT NULL DEFAULT current_timestamp(),
+PRIMARY KEY (admin_id)
+)
+
+INSERT INTO `admins` (`admin_id`, `email`, `password`, `role`) VALUES (NULL, 'pera@mail.com', '12345', 'admin')
