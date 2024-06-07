@@ -35,6 +35,12 @@ const show = async (req, res) => {
     WHERE student_id = ?`,
     [student_id]
   );
+  const [payments] = await db.query(
+    `SELECT * FROM payments 
+    JOIN courses ON payments.course_id = courses.course_id
+    WHERE student_id = ?`,
+    [student_id]
+  );
 
   const displayCourses = [];
 
@@ -68,6 +74,7 @@ const show = async (req, res) => {
     student,
     displayCourses,
     enrollments,
+    payments,
   });
 };
 

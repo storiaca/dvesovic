@@ -1,10 +1,17 @@
 const db = require("../database/config");
 
 const index = async (req, res) => {
-  const [students] = await db.query("SELECT * FROM students");
-  res.render("students/index", {
-    title: "Students",
-    students,
+  const [payments] = await db.query(`SELECT * FROM payments
+    JOIN students ON payments.student_id = students.student_id
+    JOIN courses ON payments.course_id = courses.course_id`);
+
+  // ovde koristi alias za sumu da bude total
+  const [[sum]] = await db.query("SELECT SUM(amount) as total FROM payments");
+
+  res.render("payments/index", {
+    title: "Payments",
+    payments,
+    sum,
     user: req.session.user,
   });
 };

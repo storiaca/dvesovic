@@ -30,9 +30,11 @@
       </div>
 
       <div class="row alert alert-secondary">
-        <button class="btn btn-outline-success form-control">
-          Node 100 10/10/20
+        <% for( let i = 0; i < payments.length; i++ ) { %>
+        <button class="btn btn-outline-success form-control mb-2">
+          <%= payments[i].title %> <%= payments[i].amount %>
         </button>
+        <% } %>
       </div>
       <div class="row">
         <div class="col-6 alert alert-info">
