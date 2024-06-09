@@ -21,3 +21,7 @@ https://nodejs.org/api/readline.html#rlsetpromptprompt
 ## express urlencoded
 
 https://expressjs.com/en/api.html#express.urlencoded
+
+## Mongoose
+
+https://mongoosejs.com/
