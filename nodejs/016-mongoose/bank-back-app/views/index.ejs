@@ -3,6 +3,50 @@
   <div class="row">
     <div class="col-10 offset-1">
       <h1>Bank</h1>
+      <h2>Add account</h2>
+      <form action="/api/v1/accounts" method="post">
+        <div class="form-group my-3" method="post">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="firstName"
+            id="firstName"
+            placeholder="First Name"
+          />
+        </div>
+        <div class="form-group my-3">
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
+          />
+        </div>
+        <div class="form-group my-3">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="email"
+          />
+        </div>
+        <div class="form-group my-3">
+          <label for="deposit">Deposit</label>
+          <input
+            type="number"
+            class="form-control"
+            name="deposit"
+            id="deposit"
+            placeholder="email"
+          />
+        </div>
+        <button type="submit" class="btn btn-default"></button>
+      </form>
     </div>
   </div>
 </div>

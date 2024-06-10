@@ -4,24 +4,32 @@ const Account = require("../models/Account");
 
 router.get("/", async (req, res) => {
   const accounts = await Account.find();
-  res.render("index", { accounts });
 });
 
 router.get("/accounts", async (req, res) => {
   const accounts = await Account.find();
-  res.send(accounts);
+  res.json({ msg: "Podaci stigli", accounts });
 });
 
 router.post("/accounts", async (req, res) => {
-  const account = new Account({
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
-    email: req.body.email,
-    deposit: req.body.deposit,
-    cCards: req.body.cCards,
-  });
-  await account.save();
-  res.send(account);
+  try {
+    if (req.body.firstName === "") {
+      console.log("Nesto", req.body);
+      res.json({ msg: "First Name is requred" });
+    } else {
+      const account = new Account({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        deposit: req.body.deposit,
+        cCards: req.body.cCards,
+      });
+      await account.save();
+      res.send(account);
+    }
+  } catch (error) {
+    res.json({ err: error.message });
+  }
 });
 
 router.delete("/accounts/:id", async (req, res) => {
