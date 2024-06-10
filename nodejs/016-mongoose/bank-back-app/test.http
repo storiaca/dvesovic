@@ -1,0 +1,25 @@
+### get all accounts
+GET http://localhost:8080/api/v1/accounts
+
+### insert account
+POST http://localhost:8080/api/v1/accounts
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "doe@example.com",
+    "deposit": 1000,
+    "cCards" : ["Visa", "MasterCard", "American Express"]
+}
+
+### delete account
+DELETE http://localhost:8080/api/v1/accounts/66649b6e73e67ef5647a85b5
+
+### update account
+PATCH  http://localhost:8080/api/v1/accounts/66649c9c5a7f4fc760a93091
+Content-Type: application/json
+
+{
+    "deposit": 666
+}
