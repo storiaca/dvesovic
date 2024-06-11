@@ -76,6 +76,24 @@ formAddUser.addEventListener("submit", async (e) => {
   formAddUser.reset();
 });
 
+/**
+ * Klasa za url
+ */
+// class FetchMethods{
+//   constructor(url){
+//       this.url = url
+//   }
+//   async getAccounts(url){
+//       try {
+//           const response = await fetch(`${this.url}`);
+//           return await response.json();
+//       } catch (error) {
+//           console.log(error);
+//           throw error;
+//       }
+//   }
+// }
+
 // function reqListener() {
 //   console.log(this.responseText);
 // }
