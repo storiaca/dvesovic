@@ -44,4 +44,6 @@ router.patch("/accounts/:id", async (req, res) => {
   res.send(updated);
 });
 
+router.use("/upload", require("./upload"));
+
 module.exports = router;

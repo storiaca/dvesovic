@@ -7,12 +7,28 @@ const lastName = document.getElementById("lastName");
 const email = document.getElementById("email");
 const deposit = document.getElementById("deposit");
 const cCards = document.getElementById("cCards");
+const formUpload = document.getElementById("formUpload");
+const imagesDiv = document.querySelector(".images");
 
 window.addEventListener("DOMContentLoaded", async (event) => {
   const res = await fetch("api/v1/accounts");
+  const res1 = await fetch("api/v1/upload");
   data = await res.json();
+  resImg = await res1.json();
+  renderImages(resImg.images);
   renderData(data);
 });
+
+function renderImages(i) {
+  let html = "";
+
+  i.forEach((image) => {
+    html += `
+       <img width="200px" src="${image.imageUrl}" alt="${image.imageName}">
+    `;
+  });
+  imagesDiv.innerHTML = html;
+}
 
 function renderData(data) {
   let html = "";
@@ -76,6 +92,28 @@ formAddUser.addEventListener("submit", async (e) => {
   formAddUser.reset();
 });
 
+formUpload.addEventListener("submit", handleFileUpload);
+
+async function handleFileUpload(e) {
+  e.preventDefault();
+  const fileName = document.getElementById("fileName").value;
+  const browseFile = document.getElementById("browseFile").files[0];
+  try {
+    const fileData = new FormData();
+    fileData.append("name", fileName);
+    fileData.append("file", browseFile);
+
+    const dataResponse = await fetch("api/v1/upload", {
+      method: "POST",
+      body: fileData,
+    });
+    const response = await dataResponse.json();
+    console.log(response);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 /**
  * Klasa za url
  */
@@ -93,24 +131,3 @@ formAddUser.addEventListener("submit", async (e) => {
 //       }
 //   }
 // }
-
-// function reqListener() {
-//   console.log(this.responseText);
-// }
-
-// const req = new XMLHttpRequest();
-// req.addEventListener("load", reqListener);
-// req.open("POST", "http://localhost:8080/api/v1/accounts", {
-//   "Content-Type": "application/json",
-//   body: {},
-// });
-// req.send();
-
-// xmlhttp.onreadystatechange = function () {
-//   if (xmlhttp.readyState !== 4) return;
-//   if (xmlhttp.status === 200) {
-//     console.log("Request Response", xmlhttp.responseText);
-//   } else {
-//     console.log("HTTP error", xmlhttp.status, xmlhttp.statusText);
-//   }
-// };

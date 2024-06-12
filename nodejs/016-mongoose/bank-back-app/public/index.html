@@ -84,6 +84,29 @@
           </form>
         </div>
       </div>
+      <div class="col-6 mt-5">
+        <h2>File upload</h2>
+        <form id="formUpload" enctype="multipart/form-data">
+          <input
+            type="text"
+            id="fileName"
+            placeholder="File Name"
+            class="form-control mb-3"
+          />
+          <label for="browseFile" class="btn btn-primary mb-3"
+            >Choose file</label
+          >
+          <input type="file" id="browseFile" class="d-none" />
+          <button type="submit" class="btn btn-warning form-control mt-2">
+            Uplaod
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="col-8 mt-5">
+      <div class="container">
+        <div class="images"></div>
+      </div>
     </div>
     <script src="main.js"></script>
   </body>
