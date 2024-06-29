@@ -12,6 +12,8 @@ const connection = mongoose
   })
   .catch((err) => console.log(err));
 
+server.use("/api", require("./routes"));
+
 server.listen(process.env.PORT, (error) => {
   if (error) {
     console.log(error);
