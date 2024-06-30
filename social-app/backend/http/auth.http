@@ -12,9 +12,9 @@ POST http://localhost:4000/api/auth/register
 Content-Type: application/json
 
 {
-  "firstName": "Pera",
-  "lastName": "Peric",
-  "email": "perap@gmail.com",
+  "firstName": "Mitar",
+  "lastName": "Gordic",
+  "email": "mitar@gmail.com",
   "password": "12345",
   "confirmPassword": "12345"
 }
