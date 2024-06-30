@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const router = Router();
 
-router.use("/auth", require("./auth"));
-router.use("/posts", require("./posts"));
+router.post("/", require("../controllers/posts/getAll"));
 
 module.exports = router;
