@@ -18,7 +18,7 @@ const login = async (req, res) => {
 
         let token = jwt.sign(payload, JWT_SECRET, {
           algorithm: "HS256",
-          expiresIn: 1000 * 60 * 60 * 6, // 6 sati
+          expiresIn: "1d",
         });
 
         res.send({ user: foundUser, token });
