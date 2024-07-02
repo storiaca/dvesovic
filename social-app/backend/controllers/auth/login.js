@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const JWT_SECRET = process.env.JWT_SECRET;
 
 const login = async (req, res) => {
+  console.log(req.body);
   try {
     let { email, password } = req.body;
     const foundUser = await UserModel.findOne({ email });
