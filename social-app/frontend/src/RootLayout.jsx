@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import axios from "axios";
 
@@ -10,12 +9,12 @@ axios.interceptors.request.use((config) => {
   return config;
 });
 
-const RootLayout = () => {
+function RootLayout(props) {
   return (
     <>
       <Outlet />
     </>
   );
-};
+}
 
 export default RootLayout;

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Auth from "../services/Auth";
+
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [inputData, setInputData] = useState({
     email: "",
     password: "",
@@ -13,7 +17,11 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     Auth.login(inputData)
-      .then((res) => console.log(res))
+      .then((res) => {
+        console.log(res);
+        localStorage.setItem("token", res.data.token);
+        navigate("/posts", { replace: true });
+      })
       .catch((err) => console.log(err));
   };
   return (

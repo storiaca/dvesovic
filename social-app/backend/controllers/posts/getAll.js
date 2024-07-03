@@ -1,6 +1,12 @@
+const PostModel = require("../../model/PostModel");
 const getAll = async (req, res, next) => {
-  console.log("GET ALL POSTS", req.locals);
-  res.send("Svi postovi");
+  try {
+    const posts = await PostModel.find({}).limit(10);
+
+    res.send(posts);
+  } catch (error) {
+    res.status(415).send(error.message);
+  }
 };
 
 module.exports = getAll;
