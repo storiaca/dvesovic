@@ -5,9 +5,8 @@ const { PORT } = require("./config/config");
 process.env.DB_URI;
 const server = express();
 
-server.use(express.json());
-
 server.use(cors());
+server.use(express.json());
 
 const connection = mongoose
   .connect(process.env.DB_URI)

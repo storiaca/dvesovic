@@ -27,7 +27,6 @@ const verifyToken = async (req, res, next) => {
   } else {
     res.status(401).send({ msg: "You must have authorization!" });
   }
-  res.send("ok");
 };
 
 module.exports = verifyToken;

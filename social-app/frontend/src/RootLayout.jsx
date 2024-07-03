@@ -9,7 +9,7 @@ axios.interceptors.request.use((config) => {
   return config;
 });
 
-function RootLayout(props) {
+function RootLayout() {
   return (
     <>
       <Outlet />
