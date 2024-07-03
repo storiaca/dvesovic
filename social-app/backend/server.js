@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 var cors = require("cors");
+const { PORT } = require("./config/config");
 process.env.DB_URI;
 const server = express();
 
@@ -17,10 +18,10 @@ const connection = mongoose
 
 server.use("/api", require("./routes"));
 
-server.listen(process.env.PORT, (error) => {
+server.listen(PORT, (error) => {
   if (error) {
     console.log(error);
   } else {
-    console.log(`Server running on http://localhost:${process.env.PORT}`);
+    console.log(`Server running on http://localhost:${PORT}`);
   }
 });

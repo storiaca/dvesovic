@@ -1,13 +1,13 @@
-import LoginForm from "../components/LoginForm";
-import loginImage from "../assets/images/login.jpg";
+import loginImg from "../assets/images/login.jpg";
 
-const Login = () => {
+import LoginForm from "../components/LoginForm";
+
+function Login() {
   return (
-    <section className="container">
-      <h1 className="text-center my-3">Login</h1>
+    <section className="container mt-3">
       <div className="row box py-5">
-        <div className="col-md-6 mb-2">
-          <img src={loginImage} className="img-fluid" alt="Login image" />
+        <div className="col-md-6">
+          <img className="img-fluid" src={loginImg} alt="" />
         </div>
         <div className="col-md-6">
           <LoginForm />
@@ -15,6 +15,6 @@ const Login = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Login;
