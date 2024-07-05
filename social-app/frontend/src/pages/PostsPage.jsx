@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Post from "../services/Post";
 
-function Posts() {
+function PostsPage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
@@ -16,20 +16,20 @@ function Posts() {
   }, []);
 
   return posts.length > 0 ? (
-    <div>
+    <div className="container mt-3">
       <h1>Posts</h1>
-      {/* {posts.map((post) => {
+      {posts.map((post) => {
         return (
           <div key={post._id}>
             <p>{post.title}</p>;
             <img className="w-25 img-fluid" src={post.image} alt="" />
           </div>
         );
-      })} */}
+      })}
     </div>
   ) : (
     "Loading..."
   );
 }
 
-export default Posts;
+export default PostsPage;
