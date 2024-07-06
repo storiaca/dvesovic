@@ -1,9 +1,11 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import RootLayout from "../RootLayout";
 import LoginPage from "../pages/LoginPage";
-import PostsPage from "../pages/PostsPage";
+import PostsLayout from "../pages/PostsLayout";
 import RegisterPage from "../pages/RegisterPage";
 import { routes } from "./routes";
+import Posts from "../pages/Posts";
+import PostByTag from "../pages/PostByTag";
 
 export const router = createBrowserRouter([
   {
@@ -20,11 +22,17 @@ export const router = createBrowserRouter([
       },
       {
         path: routes.POSTS.path,
-        element: (
-          <RouteProtect>
-            <PostsPage />
-          </RouteProtect>
-        ),
+        element: <PostsLayout />,
+        children: [
+          {
+            path: routes.POSTS.path,
+            element: <Posts />,
+          },
+          {
+            path: routes.POST_TAG.path,
+            element: <PostByTag />,
+          },
+        ],
       },
       {
         path: "/dashboard",

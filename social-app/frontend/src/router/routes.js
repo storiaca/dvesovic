@@ -8,4 +8,8 @@ export const routes = {
   POSTS: {
     path: "/posts",
   },
+  POST_TAG: {
+    path: "/posts/tag/:tagName",
+    realPath: (tagName) => `/posts/tag/${tagName}`,
+  },
 };
