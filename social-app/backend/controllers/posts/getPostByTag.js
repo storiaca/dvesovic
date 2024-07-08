@@ -6,7 +6,7 @@ const getPostByTag = async (req, res, next) => {
   try {
     const posts = await PostModel.aggregate([
       { $match: { "tags.name": tagName } },
-      { limit: 9 },
+      { $limit: 9 },
       ...joinUserToPost,
     ]);
     res.send(posts);
