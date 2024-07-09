@@ -8,5 +8,11 @@ router.get(
   verifyToken,
   require("../controllers/posts/getPostByTag")
 );
+router.get("/:id", verifyToken, require("../controllers/posts/getSingle"));
+router.post(
+  "/comments/add",
+  verifyToken,
+  require("../controllers/posts/addComment")
+);
 
 module.exports = router;

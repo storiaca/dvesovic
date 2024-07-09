@@ -6,6 +6,7 @@ import RegisterPage from "../pages/RegisterPage";
 import { routes } from "./routes";
 import Posts from "../pages/Posts";
 import PostByTag from "../pages/PostByTag";
+import SinglePost from "../pages/SinglePost";
 
 export const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
             element: <PostByTag />,
           },
         ],
+      },
+      {
+        path: routes.SINGLE_POST.path,
+        element: <SinglePost />,
       },
       {
         path: "/dashboard",
