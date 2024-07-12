@@ -1,7 +1,8 @@
 import { Outlet } from "react-router-dom";
 import CreateMemory from "../components/CreateMemory";
+import SearchForm from "../components/SearchForm";
 
-function PostsLayout(props) {
+function PostsLayout() {
   return (
     <section className="container">
       <div className="row mt-3">
@@ -11,9 +12,7 @@ function PostsLayout(props) {
           </div>
         </div>
         <div className="col-md-4">
-          <div className="box">
-            <h2>Search form</h2>
-          </div>
+          <SearchForm />
           <div className="box mt-3">
             <CreateMemory />
           </div>

@@ -7,6 +7,7 @@ import { routes } from "./routes";
 import Posts from "../pages/Posts";
 import PostByTag from "../pages/PostByTag";
 import SinglePost from "../pages/SinglePost";
+import SearchPosts from "../pages/SearchPost";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ export const router = createBrowserRouter([
           {
             path: routes.POST_TAG.path,
             element: <PostByTag />,
+          },
+          {
+            path: routes.POSTS_SEARCH.path,
+            element: <SearchPosts />,
           },
         ],
       },

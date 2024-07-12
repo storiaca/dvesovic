@@ -16,4 +16,7 @@ export const routes = {
     path: "/posts/tag/:tagName",
     realPath: (tagName) => `/posts/tag/${tagName}`,
   },
+  POSTS_SEARCH: {
+    path: "/posts/search",
+  },
 };
