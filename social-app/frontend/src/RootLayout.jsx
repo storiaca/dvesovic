@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, redirect } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
@@ -10,6 +10,21 @@ axios.interceptors.request.use((config) => {
   }
   return config;
 });
+
+axios.interceptors.response.use(
+  (value) => {
+    // console.log(value);
+    return value;
+  },
+  (error) => {
+    // console.log("RESPONSE INTERCEPTOR ERROR", error.response.status);
+    let status = error.response.status;
+    if (status === 401) {
+      localStorage.removeItem("token");
+      window.location.href = "/";
+    }
+  }
+);
 
 function RootLayout() {
   return (

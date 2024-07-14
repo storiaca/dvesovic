@@ -22,7 +22,9 @@ const login = async (req, res) => {
           expiresIn: "1d",
         });
 
-        res.send({ user: foundUser, token });
+        let { password, ...restData } = foundUser._doc;
+
+        res.send({ user: restData, token });
         //res.send("User is logged.");
       } else {
         res.status(201).send("Password is wrong!");

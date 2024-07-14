@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../redux/userSlice";
 
 import Auth from "../services/Auth";
 
 const LoginForm = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [inputData, setInputData] = useState({
     email: "",
     password: "",
@@ -19,6 +22,7 @@ const LoginForm = () => {
     Auth.login(inputData)
       .then((res) => {
         console.log(res);
+        dispatch(setUser(res.data.user));
         localStorage.setItem("token", res.data.token);
         navigate("/posts", { replace: true });
       })
