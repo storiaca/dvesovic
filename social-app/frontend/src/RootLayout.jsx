@@ -2,6 +2,9 @@ import { Outlet, redirect } from "react-router-dom";
 import axios from "axios";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { restoreUser } from "./redux/userSlice";
 
 axios.defaults.baseURL = "http://localhost:4000/api";
 axios.interceptors.request.use((config) => {
@@ -27,6 +30,10 @@ axios.interceptors.response.use(
 );
 
 function RootLayout() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(restoreUser());
+  }, []);
   return (
     <>
       <Navbar />
