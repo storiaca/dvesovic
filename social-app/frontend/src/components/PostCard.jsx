@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { routes } from "../router/routes";
+import { useSelector } from "react-redux";
 import dayjs from "dayjs";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 const PostCard = ({ post }) => {
+  const { user } = useSelector((state) => state.userStore);
   return (
     <div className="col-md-4">
       <div className="post card">
@@ -23,7 +26,14 @@ const PostCard = ({ post }) => {
           {post.title}
         </div>
         <div className="card-footer d-flex justify-content-between align-content-center gap-2">
-          <Link to={""}>{post.reactions} Likes</Link>
+          <Link to={""}>
+            {post.likes.some((like) => like.userId === user._id) ? (
+              <FaHeart />
+            ) : (
+              <FaRegHeart />
+            )}
+            {post.likes.length} Likes
+          </Link>
           <span>{dayjs(post.createdAt).format("DD-MM-YYYY")}</span>
         </div>
       </div>

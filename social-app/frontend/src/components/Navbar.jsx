@@ -1,10 +1,18 @@
-import { Link, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../redux/userSlice";
 import { routes } from "../router/routes";
 import logo from "../assets/images/logo.png";
 
+const style = {
+  width: "50px",
+  height: "50px",
+};
 function Navbar() {
   const { user } = useSelector((state) => state.userStore);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   return (
     <nav className="container navbar navbar-expand box px-3 mt-3">
       <Link className="navbar-brand" to={routes.POSTS.path}>
@@ -30,13 +38,24 @@ function Navbar() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <Link to={""} className="nav-link">
+                <button
+                  className="nav-link"
+                  onClick={() => {
+                    dispatch(logout());
+                    navigate(routes.LOGIN.path);
+                  }}
+                >
                   LOG OUT
-                </Link>
+                </button>
               </li>
               <li className="nav-item">
-                <Link to={""} className="nav-link">
-                  {/* to account */}
+                <Link to={"/"}>
+                  <img
+                    style={style}
+                    src={user.image}
+                    className="rounded-circle object-fit-cover"
+                    alt=""
+                  />
                 </Link>
               </li>
             </>
