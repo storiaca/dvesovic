@@ -7,7 +7,6 @@ function Posts() {
   useEffect(() => {
     Post.getAll()
       .then((res) => {
-        console.log(res.data);
         setPosts(res.data);
       })
       .catch((error) => {
