@@ -75,7 +75,7 @@ function CreateMemory() {
         <hr />
 
         <div className="form-control d-flex flex-wrap gap-2">
-          <TagsCBX tags={tags} />
+          <TagsCBX tags={tags} input={input} setInput={setInput} />
         </div>
 
         <div className="form-control d-flex justify-content-center flex-wrap gap-2">
@@ -126,7 +126,7 @@ function CreateMemory() {
 
 export default CreateMemory;
 
-const TagsCBX = ({ tags }) => {
+const TagsCBX = ({ tags, input, setInput }) => {
   const handleInputCheck = (e) => {
     let tags = [...input.tags];
     if (tags.includes(e.target.value)) {

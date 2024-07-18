@@ -19,5 +19,6 @@ router.get(
   require("../controllers/posts/getPostByTag")
 );
 router.get("/:id", verifyToken, require("../controllers/posts/getSingle"));
+router.post("/", verifyToken, require("../controllers/posts/addNewPost"));
 
 module.exports = router;

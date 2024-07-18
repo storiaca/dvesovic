@@ -4,6 +4,7 @@ const joinUserToPost = require("../../joins/joinUserToPost");
 const getAll = async (req, res, next) => {
   try {
     const posts = await PostModel.aggregate([
+      { $sort: { createdat: -1 } },
       { $limit: 30 },
       ...joinUserToPost,
       {
