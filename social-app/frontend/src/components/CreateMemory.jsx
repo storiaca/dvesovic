@@ -48,6 +48,11 @@ function CreateMemory() {
       });
   };
 
+  // const handleResetForm = (e) => {
+  //   // e.preventDefault();
+  //   console.log("reset");
+  //   //reset();
+  // };
   return (
     <>
       <h5 className="text-center">Create memory</h5>
@@ -116,9 +121,13 @@ function CreateMemory() {
         <button type="submit" className="form-control btn btn-primary">
           Create
         </button>
-        <button type="reset" className="form-control btn btn-danger">
+        {/* <button
+          type="reset"
+          onClick={handleResetForm}
+          className="form-control btn btn-danger"
+        >
           Clear
-        </button>
+        </button> */}
       </form>
     </>
   );

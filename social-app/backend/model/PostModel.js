@@ -11,7 +11,7 @@ const TagSchema = new Schema(
 );
 
 const PostSchema = new Schema({
-  body: { type: String },
+  body: { type: String, required: true },
   createdAt: { type: Date, default: () => new Date().getTime() },
   image: {
     type: String,
