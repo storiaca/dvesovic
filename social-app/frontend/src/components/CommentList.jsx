@@ -23,5 +23,5 @@ const CommentList = ({ comments }) => {
     </div>
   );
 };
-
+// 32:31
 export default CommentList;
