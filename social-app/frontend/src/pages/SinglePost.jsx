@@ -3,6 +3,7 @@ import Post from "../services/Post";
 import dayjs from "dayjs";
 import { useQuery } from "@tanstack/react-query";
 import AddCommentForm from "../components/AddCommentForm";
+import CommentList from "../components/CommentList";
 
 const SinglePost = () => {
   const { id } = useParams();
@@ -32,13 +33,7 @@ const SinglePost = () => {
             <hr />
             <AddCommentForm postId={post._id} reftch={refetch} />
             <hr />
-            <div className="commentList">
-              <ul>
-                {post.comments.map((comment) => {
-                  return <li key={comment._id}>{comment.body}</li>;
-                })}
-              </ul>
-            </div>
+            <CommentList comments={post.comments} />
           </div>
 
           <div className="col-md-6">

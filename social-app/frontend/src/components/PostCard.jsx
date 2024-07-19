@@ -24,6 +24,12 @@ const PostCard = ({ post }) => {
             ))}
           </div>
           {post.title}
+          <Link
+            to={routes.SINGLE_POST.realPath(post._id)}
+            className="btn btn-primary form-control"
+          >
+            Read more
+          </Link>
         </div>
         <div className="card-footer d-flex justify-content-between align-content-center gap-2">
           <Link to={""}>
