@@ -1,7 +1,8 @@
 import axios from "axios";
 
 class Post {
-  static getAll = () => axios.get("/posts");
+  static getAll = (page, limit) =>
+    axios.get(`/posts?page=${page}&limit=${limit}`);
   static addNew = (data) => axios.post("/posts", data);
   static getPostByTag = (tagName) => axios.get(`/posts/tag/${tagName}`);
   static getSinglePost = (id) => axios.get(`/posts/${id}`);
