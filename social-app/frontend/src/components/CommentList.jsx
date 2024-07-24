@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 import Comments from "../services/Comments";
 import { toast } from "react-toastify";
 
-const CommentList = ({ comments }) => {
+const CommentList = ({ comments, refetch }) => {
   const deleteHandler = (id, postId) => {
     Comments.deleteComment(id, postId)
       .then((res) => {

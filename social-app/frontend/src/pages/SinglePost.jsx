@@ -33,7 +33,7 @@ const SinglePost = () => {
             <hr />
             <AddCommentForm postId={post._id} reftch={refetch} />
             <hr />
-            <CommentList comments={post.comments} />
+            <CommentList comments={post.comments} refetch={refetch} />
           </div>
 
           <div className="col-md-6">

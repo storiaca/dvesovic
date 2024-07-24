@@ -6,7 +6,7 @@ const router = Router();
 router.delete(
   "/:id",
   verifyToken,
-  require("../conrollers/comments/deleteComment")
+  require("../controllers/comments/deleteComment")
 );
 
 module.exports = router;

@@ -1,5 +1,5 @@
 const { SERVER_ERROR, FORBIDDEN } = require("../../config/statusCodes");
-const CommentModel = require("../../model/CommentsModel");
+const CommentModel = require("../../model/CommentModel");
 const PostModel = require("../../model/PostModel");
 const deleteComment = async (req, res, next) => {
   const { id } = req.params;

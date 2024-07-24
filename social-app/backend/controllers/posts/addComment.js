@@ -1,5 +1,5 @@
 const { SERVER_ERROR, DB_ERROR } = require("../../config/statusCodes");
-const CommentModel = require("../../model/CommentsModel");
+const CommentModel = require("../../model/CommentModel");
 const addComment = async (req, res, next) => {
   try {
     let user = {
