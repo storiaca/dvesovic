@@ -19,4 +19,7 @@ export const routes = {
   POSTS_SEARCH: {
     path: "/posts/search",
   },
+  MEMBER: {
+    path: "member",
+  },
 };

@@ -8,6 +8,7 @@ import Posts from "../pages/Posts";
 import PostByTag from "../pages/PostByTag";
 import SinglePost from "../pages/SinglePost";
 import SearchPosts from "../pages/SearchPost";
+import MemberPage from "../pages/MemberPage";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <h1>Dashboard</h1>,
+      },
+      {
+        path: routes.MEMBER.path,
+        element: <MemberPage />,
       },
     ],
   },
