@@ -9,6 +9,7 @@ import PostByTag from "../pages/PostByTag";
 import SinglePost from "../pages/SinglePost";
 import SearchPosts from "../pages/SearchPost";
 import MemberPage from "../pages/MemberPage";
+import ClientLayout from "../layout/ClientLayout";
 
 export const router = createBrowserRouter([
   {
